@@ -5,7 +5,7 @@ import 'package:insights_news_2_11/core/services/local_storage.dart';
 import 'package:insights_news_2_11/core/utils/text_styles.dart';
 
 class HomeHeader extends StatefulWidget {
-   HomeHeader({
+  HomeHeader({
     super.key,
   });
 
@@ -49,11 +49,11 @@ class _HomeHeaderState extends State<HomeHeader> {
             ),
           ],
         ),
-         Spacer(),
+        Spacer(),
         CircleAvatar(
           backgroundImage: path != null
               ? FileImage(File(path!)) as ImageProvider
-              :  AssetImage('assets/user.png'),
+              : AssetImage('assets/user.png'),
         )
       ],
     );

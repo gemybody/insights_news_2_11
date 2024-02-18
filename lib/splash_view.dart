@@ -4,8 +4,9 @@ import 'package:insights_news_2_11/core/functions/routing.dart';
 import 'package:insights_news_2_11/core/services/local_storage.dart';
 import 'package:insights_news_2_11/core/utils/app_colors.dart';
 import 'package:insights_news_2_11/core/utils/text_styles.dart';
-import 'package:insights_news_2_11/features/home/nav_bar.dart';
+import 'package:insights_news_2_11/features/home/peresintation/view/nav_bar.dart';
 import 'package:insights_news_2_11/features/upload/upload_view.dart';
+
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
@@ -23,7 +24,7 @@ class _SplashViewState extends State<SplashView> {
     });
     Future.delayed(const Duration(seconds: 3), () {
       pushWithReplacment(
-          context, isUpload ?  NavBarWidget() : const UploadView());
+          context, isUpload ? const NavBarWidget() : const UploadView());
     });
   }
 
@@ -38,7 +39,7 @@ class _SplashViewState extends State<SplashView> {
               'assets/logo.png',
               width: 300,
             ),
-             Gap(10),
+            Gap(10),
             Text(
               'Insights News',
               style: getTitleStyle(color: AppColors.white),

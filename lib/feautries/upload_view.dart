@@ -9,8 +9,7 @@ import 'package:insights_news_2_11/core/services/local_storage.dart';
 import 'package:insights_news_2_11/core/utils/app_colors.dart';
 import 'package:insights_news_2_11/core/utils/text_styles.dart';
 import 'package:insights_news_2_11/core/widgets/custom_btn.dart';
-import 'package:insights_news_2_11/features/home/home_view.dart';
-
+import 'package:insights_news_2_11/features/home/peresintation/view/home_view.dart';
 
 String? path;
 String name = '';
@@ -30,7 +29,6 @@ class _UploadViewState extends State<UploadView> {
         actions: [
           TextButton(
               onPressed: () {
-               
                 if (path != null && name.isNotEmpty) {
                   AppLocal.cacheData(AppLocal.IMAGE_KEY, path);
                   AppLocal.cacheData(AppLocal.NAME_KEY, name);
@@ -58,7 +56,7 @@ class _UploadViewState extends State<UploadView> {
                 radius: 80,
                 backgroundImage: (path != null)
                     ? FileImage(File(path!)) as ImageProvider
-                    :  AssetImage(
+                    : AssetImage(
                         'assets/user.png',
                       ),
               ),

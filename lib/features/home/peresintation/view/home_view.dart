@@ -1,12 +1,11 @@
-
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:insights_news_2_11/core/utils/app_colors.dart';
 import 'package:insights_news_2_11/core/utils/text_styles.dart';
-import 'package:insights_news_2_11/features/home/widgets/home_header.dart';
-import 'package:insights_news_2_11/features/home/widgets/news_list_builder.dart';
+import 'package:insights_news_2_11/features/home/peresintation/widgets/home_header.dart';
+import 'package:insights_news_2_11/features/home/peresintation/widgets/news_list_builder.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeView extends StatefulWidget {
@@ -27,8 +26,8 @@ class _HomeViewState extends State<HomeView> {
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 30),
           child: Column(
             children: [
-               HomeHeader(),
-               Gap(20),
+              HomeHeader(),
+              Gap(20),
               CarouselSlider.builder(
                   itemCount: 5,
                   itemBuilder:
@@ -57,7 +56,7 @@ class _HomeViewState extends State<HomeView> {
                       });
                     },
                   )),
-               Gap(10),
+              Gap(10),
               SmoothPageIndicator(
                   controller: PageController(
                     initialPage: pageIndex,
@@ -97,9 +96,10 @@ class _HomeViewState extends State<HomeView> {
                       text: 'Business',
                     ),
                   ]),
-               Expanded(
+              Expanded(
                 child: TabBarView(children: [
                   NewsListBuilder(),
+                  
                   NewsListBuilder(),
                   NewsListBuilder(),
                   NewsListBuilder(),
