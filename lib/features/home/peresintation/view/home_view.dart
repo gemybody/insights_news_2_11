@@ -96,13 +96,14 @@ class _HomeViewState extends State<HomeView> {
                       text: 'Business',
                     ),
                   ]),
+                  Gap(10),
               Expanded(
                 child: TabBarView(children: [
-                  NewsListBuilder(),
+                  NewsListBuilder(category:'Science' ,),
                   
-                  NewsListBuilder(),
-                  NewsListBuilder(),
-                  NewsListBuilder(),
+                  NewsListBuilder(category:'Entertainment' ,),
+                  NewsListBuilder(category: 'Sports',),
+                  NewsListBuilder(category:  'Business',),
                 ]),
               ),
             ],
